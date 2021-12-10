@@ -13,7 +13,9 @@ namespace LeetCode {
             // model.start("mississippi", "pi");
             // model.sample("hello", "ll");
             // Console.WriteLine($"back:{t.ElapsedMilliseconds}/ms");
-            Console.WriteLine($"Result:{new InsertPosition().start(new int[] { 1,2,3,4,5,10}, 2)}");
+            // Console.WriteLine($"Result:{new InsertPosition().start(new int[] { 1,2,3,4,5,10}, 2)}");
+            Console.WriteLine($"start Result:{ new MaxSubArray().start(new int[] {1,-2,-2,-1,5,-1,-2,6})}");
+            Console.WriteLine($"sample Result:{ new MaxSubArray().sample(new int[] {1,-2,-2,-1,5,-1,-2,6})}");
         }
     }
 }
