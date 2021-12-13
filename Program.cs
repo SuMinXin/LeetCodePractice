@@ -16,7 +16,8 @@ namespace LeetCode {
             // Console.WriteLine($"Result:{new InsertPosition().start(new int[] { 1,2,3,4,5,10}, 2)}");
             // Console.WriteLine($"start Result:{ new MaxSubArray().start(new int[] {1,-2,-2,-1,5,-1,-2,6})}");
             // Console.WriteLine($"sample Result:{ new MaxSubArray().sample(new int[] {1,-2,-2,-1,5,-1,-2,6})}");
-            Console.WriteLine($"sample Result:{ new AddBinary().start("1010", "1011")}");
+            // Console.WriteLine($"Result:{ new AddBinary().start("1010", "1011")}");
+            Console.WriteLine($"Result:{ new ClimbStairs().start(5)}");
         }
     }
 }
