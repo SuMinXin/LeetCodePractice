@@ -1,10 +1,12 @@
-﻿namespace LeetCode {
+﻿using System.Collections.Generic;
+
+namespace LeetCode {
     /// <summary> 移除重複項 </summary>
     public class DeleteDuplicates {
-        public ListNode start() {
+        public string start() {
             ListNode head = setStart();
             if (head == null) {
-                return head;
+                return "[]";
             }
             ListNode n = new ListNode();
             ListNode t = n;
@@ -20,8 +22,29 @@
                 head = head.next;
             }
             while (head != null);
-            return n.next;
+            return print(n.next);
         }
+
+        public string sample() {
+            /* ListNode flag = head; */
+            ListNode head = setStart();
+            if (head == null || head.next == null) {
+                return print(head);
+            }
+            ListNode f1 = head;
+            ListNode f2 = head.next;
+            do {
+                if (f1.val == f2.val) {
+                    f1.next = f2.next;
+                    f2 = f1.next;
+                } else {
+                    f1 = f1.next;
+                    f2 = f2.next;
+                }
+            } while (f2 != null);
+            return print(head);
+        }
+
         private ListNode setStart() {
             return new ListNode() {
                 val = 1,
@@ -52,6 +75,15 @@
                         }
                         }
             };
+        }
+
+        private string print(ListNode nodes) {
+            List<int> result = new List<int>();
+            do {
+                result.Add(nodes.val);
+                nodes = nodes.next;
+            } while (nodes != null);
+            return $"[{string.Join(",", result)}]";
         }
     }
     public class ListNode {

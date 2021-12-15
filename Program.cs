@@ -19,7 +19,7 @@ namespace LeetCode {
             // Console.WriteLine($"sample Result:{ new MaxSubArray().sample(new int[] {1,-2,-2,-1,5,-1,-2,6})}");
             // Console.WriteLine($"Result:{ new AddBinary().start("1010", "1011")}");
             // Console.WriteLine($"Result:{ new ClimbStairs().start(5)}");
-            Console.WriteLine($"Result:{ JsonSerializer.Serialize(new DeleteDuplicates().start()) }");
+            Console.WriteLine($"Result:{ JsonSerializer.Serialize(new DeleteDuplicates().sample()) }");
         }
     }
 }
